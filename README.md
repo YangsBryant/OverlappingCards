@@ -25,7 +25,7 @@ configurations.all {
       }
 ```
 
-##SimpleOverlayAdapter还有另一个构造器
+## SimpleOverlayAdapter还有另一个构造器
 ```java
 SimpleOverlayAdapter(Context context, Drawable error,Drawable load)//图片加载异常显示的占位图，图片加载中显示的占位图
 ```
