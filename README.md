@@ -11,18 +11,24 @@ allprojects {
     }
 }
 ```
+
 ```java
 implementation 'com.github.YangsBryant:OverlappingCards:1.0.2'
 ```
+## 如果报NoSuchMethodError错误，是此库的Glide版本和你项目的Glide版本不一致导致，可添加如下代码：
 ```java
-如果报NoSuchMethodError错误，是你的Glide版本和此库的版本不一致导致，可添加如下代码：
-//在app的build.gradle文件里的dependencies标签内
+/*在app的build.gradle文件里的dependencies标签内添加，代码里glide的版本为对比出的最低版本。也可将你的项目glide版本改为4.9.0即可*/
 configurations.all {
         resolutionStrategy {
-            force 'com.github.bumptech.glide:glide:4.7.1'
+            force 'com.github.bumptech.glide:glide:*'
         }
       }
 ```
+
+##SimpleOverlayAdapter还有另一个构造器
+```java
+SimpleOverlayAdapter(Context context, Drawable error,Drawable load)//图片加载异常显示的占位图，图片加载中显示的占位图
+``
 
 ## 主要代码
 ```java
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int i) {
+                //想获取正确的下标如下：
                 Toast.makeText(MainActivity.this,i % imgUrls.length+"",Toast.LENGTH_SHORT).show();
             }
 
