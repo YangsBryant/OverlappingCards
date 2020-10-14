@@ -14,6 +14,15 @@ allprojects {
 ```java
 implementation 'com.github.YangsBryant:OverlappingCards:1.0.2'
 ```
+```java
+如果报NoSuchMethodError错误，是你的Glide版本和此库的版本不一致导致，可添加如下代码：
+//在app的build.gradle文件里的dependencies标签内
+configurations.all {
+        resolutionStrategy {
+            force 'com.github.bumptech.glide:glide:4.7.1'
+        }
+      }
+```
 
 ## 主要代码
 ```java
