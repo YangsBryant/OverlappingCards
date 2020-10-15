@@ -1,5 +1,5 @@
 # OverlappingCards
-卡片重叠的滑动切换
+重叠的卡片滑动
 
 ![这是一张图片](https://github.com/YangsBryant/OverlappingCards/blob/master/9izwo-onurk.gif)
 
