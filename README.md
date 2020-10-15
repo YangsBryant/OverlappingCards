@@ -1,6 +1,8 @@
 # OverlappingCards
 卡片重叠的滑动切换
 
+![这是一张图片](https://github.com/YangsBryant/OverlappingCards/blob/master/9izwo-onurk.gif)
+
 ## 引入module
 ```java
 allprojects {
